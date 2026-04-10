@@ -223,6 +223,11 @@ nav ul li a:hover::after {
   overflow: hidden;
   border: 1px solid #333;
 }
+/* .project-image {
+    background-image: url('https://raw.githubusercontent.com/Horizon-17-git/Portfolio/master/Assets/lamp.png');
+    background-size: cover;
+    background-position: center;
+} */
 
 .project-image img {
   width: 100%;
