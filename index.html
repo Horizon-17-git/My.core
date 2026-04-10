@@ -1,11 +1,168 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>DEJEN<span>.CORE</span></h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">Blueprint</a></li>
+          <li><a href="#skills">Tech.Stack</a></li>
+          <li><a href="#projects">Modules</a></li>
+          <li><a href="#contact">Connect</a></li>
+          <li><a href="#address">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about" class="blueprint">
+        <div class="blueprint-content">
+          <h2 class="glitch-text">SYSTEM.INITIALIZATION</h2>
+          <h3>Lead Creative Developer || <span>DEJEN.CORE</span></h3>
+          <p>
+            Architecting digital experiences with precision logic and
+            avant-garde design. Specializing in high-performance frontend
+            systems and clean, scalable architecture.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills" class="tech-stack">
+        <h2 class="section-title">TECH.STACK</h2>
+        <div class="grid-container">
+          <div class="skill-card">
+            <div class="skill-name">
+              <span class="skill-code">>></span>
+              <h4>HTML5</h4>
+            </div>
+            <p>Structural Architecture</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-name">
+              <span class="skill-code">>></span>
+              <h4>CSS3</h4>
+            </div>
+            <p>Visual Systems & Flexbox</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-name">
+              <span class="skill-code">>></span>
+              <h4>JAVASCRIPT</h4>
+            </div>
+            <p>Logic & Interactivity</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-name">
+              <span class="skill-code">>></span>
+              <h4>JAVA</h4>
+            </div>
+            <p>Backend Infrastructure</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="modules">
+    <h2 class="section-title">SELECTED.MODULES</h2>
+
+    <div class="project-card">
+        <div class="project-image">
+            <img src="project1.jpg" alt="EcoTrack Dashboard">
+        </div>
+        <div class="project-info">
+            <span class="module-number">MOD_01</span>
+            <h3>EcoTrack Dashboard</h3>
+            <p>A high-performance interface for monitoring carbon footprints. Built for speed and precision.</p>
+            <div class="tech-used">
+                <span>#HTML</span> <span>#CSS_GRID</span> <span>#JS</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-card reverse">
+        <div class="project-image">
+            <img src="project2.jpg" alt="DevConnect Library">
+        </div>
+        <div class="project-info">
+            <span class="module-number">MOD_02</span>
+            <h3>DevConnect Library</h3>
+            <p>A centralized hub for developer documentation and resource management.</p>
+            <div class="tech-used">
+                <span>#JAVA</span> <span>#SQL</span> <span>#CSS</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="connect">
+    <h2 class="section-title">INITIALIZE.CONTACT</h2>
+    <form class="terminal-form">
+        <div class="input-group">
+            <label for="name">>> USERNAME:</label>
+          <div class="input-wrapper">
+              <input type="text" id="name" name="name" required placeholder="Type your name...">
+            <span class="focus-border"></span>
+          </div>
+        </div>
+        <div class="input-group">
+            <label for="email">>> EMAIL:</label>
+            <div class="input-wrapper">
+              <input type="email" id="email" name="email" required placeholder="Your email address...">
+            <span class="focus-border"></span>
+            </div>
+        </div>
+        <div class="input-group">
+            <label for="message">>> MESSAGE:</label>
+            <div class="input-wrapper">
+              <textarea id="message" name="message" rows="5" placeholder="Enter your data..."></textarea>
+              <span class="focus-border"></span> 
+            </div>
+        </div>
+        <button type="submit" class="submit-btn">SEND()</button>
+    </form>
+</section>
+    </main>
+
+<footer>
+    <div id="address" class="footer-content">
+        <p class="status-text">TERMINAL_STATUS: <span class="online">ONLINE</span></p>
+        
+        <div class="social-icons">
+            <a href="https://t.me/DejNova_17" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://facebook.com/Horizon017" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            
+            <a href="https://discord.com/dejen.core" target="_blank" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+            <a href="#"></a>
+            <a href="https://github.com/Horizon-17-git" target="_blank" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/Dejen-IO" target="_blank" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://instagram.com/horizon____17" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+
+        <p class="copyright">&copy;2026 DEJEN.CORE // ALL_SYSTEMS_GO 
+        <span>Started Journey at AuraX Hub</span>
+        <span>Call me: +251995109144</span>
+      </p>
+    </div>
+</footer>
+  </body>
 </html>

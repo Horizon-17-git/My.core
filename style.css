@@ -1,5 +1,452 @@
+html {
+  scroll-behavior: smooth;
+}
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bg-dark);
+}
+
+:root {
+  --bg-dark: #161616;
+
+  --bg-card: #222222;
+
+  --accent-red: #e11d48;
+  --extra-blue: #0c41ee;
+  --text-main: #ffffff;
+  --text-dim: #a1a1aa;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 6cap;
+
+  background-color: var(--bg-dark);
+
+  border-bottom: 1px solid var(--accent-red);
+
+}
+
+.logo h1 {
+  color: var(--text-main);
+  font-family: "Courier New", monospace;
+  font-size: 40px;
+}
+
+.logo h1 span {
+  color: var(--accent-red);
+  /* Adding a red glow to the .CORE text */
+  text-shadow: 0 0 15px rgba(225, 29, 72, 0.7);
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+nav li {
+  display: inline;
+}
+
+nav a {
+  color: var(--text-dim);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.6s;
+  position: relative;
+}
+
+nav a:hover {
+  color: var(--accent-red);
+
+  text-shadow: 0 0 10px var(--accent-red);
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background-color: var(--accent-red);
+  transition: 0.5s;
+  transform: translateX(-50%);
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.blueprint {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--bg-dark);
+  padding: 0 10%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-top: 1px red solid;
+}
+
+.blueprint h2 {
+  font-size: 3rem;
+  color: var(--text-main);
+  letter-spacing: 10px;
+  margin-bottom: 10px;
+}
+
+.blueprint h3 {
+  color: var(--text-dim);
+  font-family: "Courier New", monospace;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bolder;
+}
+@keyframes pulse {
+  0% {
+    text-shadow: 0 10px 0 0 var(--accent-red);
+  }
+  50% {
+    text-shadow: 0 10px 0 var(--text-dim);
+  }
+  100% {
+    text-shadow: 0 0 20px var(--text-dim);
+  }
+}
+
+.blueprint h3 span {
+  color: var(--accent-red);
+  animation: pulse 3s infinite ease-in-out;
+}
+
+.blueprint p {
+  color: var(--text-dim);
+  max-width: 600px;
+  line-height: 1.6;
+  margin-left: 10%;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 17px;
+}
+
+/* skills */
+
+:root {
+  --font-main: "Inter", sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+}
+
+.tech-stack {
+  padding: 100px 8%;
+  background-color: var(--bg-dark);
+}
+
+.section-title {
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  margin-bottom: 50px;
+  border-left: 5px solid var(--accent-red);
+  padding-left: 15px;
+  font-size: 34px;
+}
+
+.grid-container {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.skill-card {
+  background-color: var(--bg-card);
+  padding: 30px;
+  border: 1px solid #3d3c3c;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  /* border-radius: 10px; */
+}
+
+.skill-card:hover {
+  /* border-color: var(--accent-red); */
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(161, 5, 39, 0.856);
+}
+.skill-name {
+  display: flex;
+  gap: 10px;
+}
+
+.skill-code {
+  color: var(--accent-red);
+  font-family: var(--font-mono);
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.skill-card h4 {
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  margin: 10px 0;
+}
+
+.skill-card p {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+/* modules section */
+
+.modules {
+  padding: 100px 8%;
+  background-color: var(--bg-dark);
+}
+
+.project-card {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 100px;
+}
+
+.project-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.project-image {
+  flex: 1;
+  overflow: hidden;
+  border: 1px solid #333;
+}
+
+.project-image img {
+  width: 100%;
+  display: block;
+  height: 300px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: 0.6s ease;
+}
+
+.project-card:hover .project-image img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.project-info {
+  flex: 1;
+}
+
+.module-number {
+  color: var(--accent-red);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.project-info h3 {
+  font-size: 2rem;
+  color: var(--text-main);
+  margin: 10px 0;
+  text-align: center;
+}
+.project-info p {
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+}
+
+.tech-used {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.tech-used span {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-red);
+}
+/* contact me */
+
+.terminal-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  padding: 40px;
+  border-top: 3px solid #424242;
+  border-bottom: 3px solid #424242;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-group input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #333;
+  color: var(--text-main);
+  padding: 10px 0;
+  font-family: var(--font-mono);
+  outline: none;
+}
+
+.input-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  background-color: var(--accent-red);
+  transition: 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.input-wrapper:focus-within::after {
+  width: 100%;
+}
+.input-group {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group label {
+  font-family: var(--font-mono);
+  color: var(--accent-red);
+  font-size: 0.8rem;
+}
+
+.input-group input,
+.input-group textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #333;
+  color: var(--text-main);
+  padding: 10px 5px;
+  font-family: var(--font-mono);
+  outline: none;
+  transition: 0.6s;
+}
+.input-group textarea {
+  outline: none;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  box-shadow: 0 5px 15px rgba(225, 29, 72, 0.1);
+}
+.input-group input:active,
+.input-group textarea:active {
+  transition: all 0.6s ease;
+}
+.submit-btn {
+  width: 100%;
+  max-width: 400px;
+  margin: 30px auto 0;
+  display: block;
+  background-color: var(--accent-red);
+  color: var(--bg-dark);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 18px;
+  font-family: var(--font-mono);
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.submit-btn:hover {
+  color: var(--text-main);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.submit-btn:active,
+.submit-btn:focus {
+  outline: none;
+  border-color: var(--accent-red);
+  color: var(--accent-red);
+  box-shadow: 0 0 20px rgba(225, 29, 72, 0.6);
+  transform: scale(0.88);
+}
+
+/* footer */
+
+@keyframes fadeup {
+    0%, 100% {
+        box-shadow: 0 0 50px rgba(225, 29, 71, 0.877);
+        transform: translateY(0);
+    }
+    50% {
+        box-shadow: 0 0 10px rgba(225, 29, 72, 0.6);
+        transform: translateY(-8px); 
+    }
+}
+
+
+footer {
+    padding: 80px 8%;
+    background-color: #000;
+    border-top: 1px solid #1a1a1a;
+    text-align: center;
+}
+
+.status-text, .copyright {
+    color: var(--text-dim); /* Ensure this is #a1a1aa or similar */
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.online {
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+/* 3. THE ICONS */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.social-icons a {
+    color: var(--text-main);
+    font-size: 1.8rem;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50%;
+    
+    /* Apply your fadeup animation */
+    animation: fadeup 4s ease-in-out infinite;
+    transition: 0.3s ease;
+}
+
+/* Offset the animations so they don't all move at once (Senior trick!) */
+.social-icons a:nth-child(1) { animation-delay: 0s; }
+.social-icons a:nth-child(2) { animation-delay: 0.5s; }
+.social-icons a:nth-child(3) { animation-delay: 1s; }
+.social-icons a:nth-child(4) { animation-delay: 1.5s; }
+
+/* 4. HOVER STATE: Snap to bright red when the user interacts */
+.social-icons a:hover {
+    color: var(--accent-red);
+    animation-play-state: paused; /* Stop the bounce while hovering */
+    filter: drop-shadow(0 0 10px var(--accent-red));
+}
+.copyright{
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+   
 }
